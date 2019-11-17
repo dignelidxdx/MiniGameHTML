@@ -144,6 +144,19 @@
             }
         }
 
+        transformarColorANumero(color) {
+            switch (numero) {
+                case 'celeste':
+                    return 0
+                case 'violeta':
+                    return 1
+                case 'naranja':
+                    return 2
+                case 'verde':
+                    return 3
+            }
+        }
+
         iluminarSecuencia() {
             for (let i = 0; i < this.nivel; i++) {
                 const color = this.transformarNumeroAColor(this.secuencia[i])
@@ -169,7 +182,7 @@
         }
 
         elegirColor(ev) {
-            console.log(this)
+            const nombreColor = ev.target.dataset.color
         }
 
     }
